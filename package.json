@@ -10,7 +10,7 @@
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp game/index.html dist/index.html",
     "build-css": "cp game/game.css dist/game.css",
-    "build-js": "browserify game/Tictattoe.js --outfile dist/game.js --transform babelify",
+    "build-js": "browserify game/Tictattoe.js --outfile dist/Tictattoe.js --transform babelify",
     "watch": "npm run build && npm run watch-js & npm run start-server",
     "watch-js": "watchify game/Tictattoe.js --outfile dist/Tictattoe.js --transform babelify --verbose"
   },
