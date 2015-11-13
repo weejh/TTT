@@ -1,6 +1,6 @@
 var winCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
                 [0, 3, 6], [1, 4, 7], [2, 5, 8],
-                [0, 4, 8], [2, 4, 6]] // winning combinations 
+                [0, 4, 8], [2, 4, 6]] // winning combinations
 var currentBoardState = [null, null, null,
                           null, null, null,
                           null, null, null]
@@ -14,7 +14,7 @@ body.addEventListener('click', event => {
       tile.textContent = ''
       document.getElementById('ResultBanner').textContent = ''
       currentBoardState.forEach(function (element, index) {
-      currentBoardState[index] = null
+        currentBoardState[index] = null
       })
     })
   }
@@ -31,14 +31,12 @@ body.addEventListener('click', event => {
   }
   // Check win lose or draw here
   // console.log(checkWin())
-  if(checkWin ()) {
-    //Print on page
+  if (checkWin()) {
     var winner = 'one'
     if (currentPlayer === 'one') winner = 'two'
     document.getElementById('ResultBanner').textContent = 'The winner is ' + winner
   }
 })
-
 
 function checkWin () {
   return winCombos.some(function (winCombo) {
@@ -53,6 +51,5 @@ function threeInRow (winCombo) {
 
   if (first) {
     return first === second && first === third
-  }
-  else { return false }
+  } else { return false }
 }
